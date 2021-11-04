@@ -25,7 +25,7 @@ header{
 
 .slider_ .sliderInner img{
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 .slider_ .iconLeft ,.slider_ .iconRight{
     width: 2%;
@@ -58,6 +58,7 @@ header{
 .sliderImageOne{
     position: absolute;
     top: 35%;
+    z-index: 9;
 }
 .sliderImageOne h1{
     font-family: var(--a);
@@ -86,9 +87,43 @@ header{
     color: black;
 }
 
+.nextPrevewButtons{
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    
+}
+.nextPrevewButtons a{
+    border-radius: 50px;
+    background: black;
+    border: solid 1px black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 35px;
+}
+.nextPrevewButtons a i{
+    color: white;
+}
+.nextPrevewButtons a:hover{
+    border: solid 1px black;
+    background: white;
+    color: black;
+}
+.nextPrevewButtons a:hover  i{
+    color: black;
+}
+
+
 @media (min-width: 768px) and (max-width: 991px) {
     header{ top: 0% }
-    .mobileBackground{background: rgb(255, 228, 110);}
+    .mobileBackground{        
+        background: rgba(255,248,218,0.9);
+        padding-left: 10px;    
+    }
     .slider_ .sliderInner{ height: auto;}
 
     .sliderImageOne{top: 18%; left: 0;}
@@ -98,25 +133,116 @@ header{
 
 
 }
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
     header{ top: 0% }
-    .mobileBackground{background: rgb(255, 228, 110);}
+    .mobileBackground{        
+        background: rgba(255,248,218,0.9);
+        padding-left: 10px; 
+    }
     .slider_ .sliderInner{ height: auto;}
 
     .sliderImageOne{top: 16%; left: 0;}
     .sliderImageOne h1{font-size: 22px;}
     .sliderImageOne p{padding-right: 0px;}
 }
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 481px) and (max-width: 576px) {
     .mobileBackground{
-        background: rgb(255, 228, 110);
+        background: rgba(255,248,218,0.9);
         text-align: center;
     }
+
+    .sliderImageOne{top: 30%; left: 0;}
+    .sliderImageOne h1{font-size: 22px;}
+    .sliderImageOne p{padding-right: 0px;}
+
+    .slider_ .sliderInner img {
+        object-fit: cover;
+        opacity: 0.6;
+        filter: blur(2px);
+    }
+
+    .nextPrevewButtons{
+        bottom: 10px;
+        right: 20px;
+        
+    }
+    .nextPrevewButtons a{
+        width: 30px;
+        height: 30px;
+        opacity: 0.3;
+        line-height: 25px;
+    }
+    .nextPrevewButtons a:hover{
+        opacity: 1;
+    }
+
+
+
+
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .mobileBackground{
+        /* background: rgb(255, 228, 110); */
+        background: rgba(255,248,218,0.9);
+        text-align: center;
+    }
+
+    .sliderImageOne{top: 30%; left: 0;}
+    .sliderImageOne h1{font-size: 22px;}
+    .sliderImageOne p{padding-right: 0px;}
+
+    .slider_ .sliderInner img {
+        object-fit: cover;
+        opacity: 0.6;
+        filter: blur(2px);
+    }
+
+    .nextPrevewButtons{
+        bottom: 10px;
+        right: 20px;
+        
+    }
+    .nextPrevewButtons a{
+        width: 30px;
+        height: 30px;
+        opacity: 0.3;
+        line-height: 25px;
+    }
+    .nextPrevewButtons a:hover{
+        opacity: 1;
+    }
+
+
 }
 
 @media (max-width: 319px){
     .mobileBackground{
-        background: rgb(255, 228, 110);
+        background: rgba(255,248,218,0.9);
         text-align: center;
+    }
+
+    .sliderImageOne{top: 30%; left: 0;}
+    .sliderImageOne h1{font-size: 22px;}
+    .sliderImageOne p{padding-right: 0px;}
+
+    .slider_ .sliderInner img {
+        object-fit: cover;
+        opacity: 0.6;
+        filter: blur(2px);
+    }
+
+    .nextPrevewButtons{
+        bottom: 10px;
+        right: 20px;
+        
+    }
+    .nextPrevewButtons a{
+        width: 30px;
+        height: 30px;
+        opacity: 0.3;
+        line-height: 25px;
+    }
+    .nextPrevewButtons a:hover{
+        opacity: 1;
     }
 }
